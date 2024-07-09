@@ -20,6 +20,9 @@ const numList = [];
 //creo un array vuoto per i numeri inseriti dall'utente
 const userNums = [];
 
+//creo un array vuoto per i numeri indovinati
+let guessed = [];
+
 //Creo cinque numeri casuali e li inserisco in numList 
 NumGen();
 console.log(numList)
@@ -41,6 +44,12 @@ setTimeout(function(){
     console.log(userNums)
 },6000);
 
+//Faccio partire la funzione che decreta il risultato
+setTimeout(function(){
+    decreting();
+    console.log(guessed)
+},7000);
+
 //----------Functions----------------
 
 //Creo una funzione che generi cinque numeri casuali unici e li inserisca dentro numList[]
@@ -59,7 +68,17 @@ function NumGen(){
 function askfor(){
     while (userNums.length < 5){
         let userNumber = prompt('Inserisci qui i numeri uno alla volta');
-        userNums.push(userNumber);
+        userNums.push(parseInt(userNumber));
     }
     return userNums;
+}
+
+//creo una funzione per confrontare i due array 
+function decreting(){
+    for (i = 0; i < numList.length; i++){
+        if (numList.includes(userNums[i])){
+            guessed.push(userNums[i])
+        }
+    }
+        
 }
