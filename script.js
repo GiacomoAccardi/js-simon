@@ -24,7 +24,11 @@ const userNum = [];
 NumGen();
 console.log(numList)
 
+// Recupero elementi dal DOM
+const numField = document.getElementById('first-target');
 
+//Mando a schermo i numeri generati casualmente
+numField.append(numList)
 
 //----------Functions----------------
 
