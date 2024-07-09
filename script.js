@@ -18,7 +18,7 @@
 const numList = [];
 
 //creo un array vuoto per i numeri inseriti dall'utente
-const userNum = [];
+const userNums = [];
 
 //Creo cinque numeri casuali e li inserisco in numList 
 NumGen();
@@ -32,8 +32,14 @@ numField.append(numList)
 
 //Faccio sparire i numeri precedentemente mandati a schermo .
 setTimeout(function(){
- numField.remove(numList)
+ numField.remove(numList);
 }, 5000);
+
+//Faccio partire la richiesta di inserimento dei numeri un secondo dopo
+setTimeout(function(){
+    askfor()
+    console.log(userNums)
+},6000);
 
 //----------Functions----------------
 
@@ -47,4 +53,13 @@ function NumGen(){
         }
     }
     return numList;
+}
+
+//creo una funzione che chieda cinque volte all'utente di inserire un numero e lo inserisca all'interno di userNums
+function askfor(){
+    while (userNums.length < 5){
+        let userNumber = prompt('Inserisci qui i numeri uno alla volta');
+        userNums.push(userNumber);
+    }
+    return userNums;
 }
