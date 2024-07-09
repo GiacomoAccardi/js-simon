@@ -13,3 +13,10 @@
 
 ---------------------------------------------------------------------------------------------------------------
 */
+
+//Creo un array vuoto per i primi numeri
+const numList = [];
+
+//creo un array vuoto per i numeri inseriti dall'utente
+const userNum = [];
+
