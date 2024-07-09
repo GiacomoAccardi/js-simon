@@ -30,6 +30,11 @@ const numField = document.getElementById('first-target');
 //Mando a schermo i numeri generati casualmente
 numField.append(numList)
 
+//Faccio sparire i numeri precedentemente mandati a schermo .
+setTimeout(function(){
+ numField.remove(numList)
+}, 5000);
+
 //----------Functions----------------
 
 //Creo una funzione che generi cinque numeri casuali unici e li inserisca dentro numList[]
