@@ -25,7 +25,6 @@ let guessed = [];
 
 //Creo cinque numeri casuali e li inserisco in numList 
 NumGen();
-console.log(numList)
 
 // Recupero elementi dal DOM
 const numField = document.getElementById('first-target');
@@ -42,13 +41,11 @@ setTimeout(function(){
 //Faccio partire la richiesta di inserimento dei numeri un secondo dopo
 setTimeout(function(){
     askfor()
-    console.log(userNums)
 },6000);
 
 //Faccio partire la funzione che decreta il risultato
 setTimeout(function(){
     decreting();
-    console.log(guessed)
     result.append('hai indovinato i seguenti numeri = ' + guessed)
 },7000);
 
