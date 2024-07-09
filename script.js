@@ -20,3 +20,22 @@ const numList = [];
 //creo un array vuoto per i numeri inseriti dall'utente
 const userNum = [];
 
+//Creo cinque numeri casuali e li inserisco in numList 
+NumGen();
+console.log(numList)
+
+
+
+//----------Functions----------------
+
+//Creo una funzione che generi cinque numeri casuali unici e li inserisca dentro numList[]
+function NumGen(){
+    while (numList.length < 5){
+        let uniqueNum = Math.floor(Math.random() *100 ) + 1;
+
+        if (! numList.includes(uniqueNum)){
+            numList.push(uniqueNum);
+        }
+    }
+    return numList;
+}
