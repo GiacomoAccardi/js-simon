@@ -29,6 +29,7 @@ console.log(numList)
 
 // Recupero elementi dal DOM
 const numField = document.getElementById('first-target');
+const result = document.getElementById('second-target');
 
 //Mando a schermo i numeri generati casualmente
 numField.append(numList)
@@ -48,6 +49,7 @@ setTimeout(function(){
 setTimeout(function(){
     decreting();
     console.log(guessed)
+    result.append('hai indovinato i seguenti numeri = ' + guessed)
 },7000);
 
 //----------Functions----------------
@@ -78,7 +80,6 @@ function decreting(){
     for (i = 0; i < numList.length; i++){
         if (numList.includes(userNums[i])){
             guessed.push(userNums[i])
-        }
+        } 
     }
-        
 }
